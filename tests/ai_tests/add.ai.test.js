@@ -3,7 +3,7 @@
  * This file contains property-based and randomized checks generated with AI help.
  * It verifies algebraic properties, random samples, and edge cases.
  */
-import add from "assignment-lib/src/add.js";
+import add from "../../src/add.js";
 
 describe("AI-generated tests for add (AI-assisted)", () => {
   test("random numeric equality: add(a,b) ~ a + b", () => {

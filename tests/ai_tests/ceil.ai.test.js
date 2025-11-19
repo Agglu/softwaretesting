@@ -3,7 +3,7 @@
  * Contains randomized checks and property-based tests to validate precision and
  * behavior at boundaries. Produced with AI assistance.
  */
-import ceil from "assignment-lib/src/ceil.js";
+import ceil from "../../src/ceil.js";
 
 describe("AI-generated tests for ceil (AI-assisted)", () => {
   test("random integers and decimals against Math.ceil for default precision", () => {
