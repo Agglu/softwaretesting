@@ -3,6 +3,9 @@ export default {
     transform: {
         "^.+\\.js$": "babel-jest"
       },
+    moduleNameMapper: {
+      "^assignment-lib/(.*)$": "<rootDir>/node_modules/assignment-lib/src/$1"
+    },      
     transformIgnorePatterns: [
         "/node_modules/(?!assignment-lib)"
     ],
@@ -12,7 +15,8 @@ export default {
     testMatch: ["**/tests/**/*.test.js"],
     collectCoverage: true,
     collectCoverageFrom: [
-      "node_modules/assignment-lib/src/**/*.js"
+      "<rootDir>/node_modules/assignment-lib/src/**/*.js",
+      "!<rootDir>/node_modules/assignment-lib/src/.internal/**"
     ],
     coverageReporters: ["lcov", "text"],
   };
