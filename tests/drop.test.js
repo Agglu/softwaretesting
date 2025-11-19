@@ -1,4 +1,4 @@
-import drop from "assignment-lib/src/drop.js";
+import drop from "../src/drop.js";
 
 describe("drop", () => {
   test("drop([1,2,3]", () => {

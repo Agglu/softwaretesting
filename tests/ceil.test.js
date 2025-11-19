@@ -1,4 +1,4 @@
-import ceil from "assignment-lib/src/ceil.js";
+import ceil from "../src/ceil.js";
 
 describe("ceil", () => {
   test("ceil(4.006) -> 5", () => {
