@@ -1,4 +1,4 @@
-import add from "assignment-lib/src/add.js";
+import add from "/src/add.js";
 
 describe("add", () => {
   test("add(6, 4) should return 10", () => {
