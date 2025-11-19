@@ -22,6 +22,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Rewrite paths for Coveralls
+        run: |
+          sed -i 's|node_modules/assignment-lib/src/|src/|g' coverage/lcov.info
+
       - name: Run tests with coverage
         run: npm test
 
