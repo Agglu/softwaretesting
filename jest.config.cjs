@@ -3,12 +3,11 @@ module.exports = {
   transform: {
     "^.+\\.js$": "babel-jest"
   },
-  transformIgnorePatterns: ["/node_modules/(?!assignment-lib)"],
   moduleFileExtensions: ["js", "mjs"],
-  testPathIgnorePatterns: ["/.internal/"],
-  coveragePathIgnorePatterns: ["/.internal/"],
+  testPathIgnorePatterns: ["/.internal/", "/node_modules"],
+  coveragePathIgnorePatterns: ["/.internal/", "/node_modules"],
   testMatch: ["**/tests/**/*.test.js"],
   collectCoverage: true,
-  collectCoverageFrom: ["<rootDir>/node_modules/assignment-lib/src/**/*.js"],
+  collectCoverageFrom: ["src/**/*.js"],
   coverageReporters: ["lcov", "text"]
 };
