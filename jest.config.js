@@ -10,6 +10,10 @@ export default {
     testPathIgnorePatterns: ["/node_modules/", "/.internal/"],
     coveragePathIgnorePatterns: ["/node_modules/", "/.internal/"],
     collectCoverage: true,
+    collectCoverageFrom: [
+      "src/**/*.js",
+      "!**/.internal/**"
+    ],
     coverageReporters: ["lcov", "text"],
   };
   
