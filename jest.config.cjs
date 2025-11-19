@@ -9,6 +9,6 @@ module.exports = {
   coveragePathIgnorePatterns: ["/.internal/"],
   testMatch: ["**/tests/**/*.test.js"],
   collectCoverage: true,
-  collectCoverageFrom: ["node_modules/assignment-lib/src/**/*.js"],
+  collectCoverageFrom: ["<rootDir>/node_modules/assignment-lib/src/**/*.js"],
   coverageReporters: ["lcov", "text"]
 };
