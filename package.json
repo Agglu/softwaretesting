@@ -1,0 +1,22 @@
+{
+  "name": "softwaretesting",
+  "version": "1.0.0",
+  "description": "school work",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Agglu/softwaretesting.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Agglu/softwaretesting/issues"
+  },
+  "homepage": "https://github.com/Agglu/softwaretesting#readme",
+  "dependencies": {
+    "assignment-lib": "git+https://github.com/otula/COMP.SE.200-2024-2025-1.git"
+  }
+}
