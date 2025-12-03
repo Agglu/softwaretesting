@@ -34,22 +34,22 @@ describe("capitalize", () => {
     });
 
     test('number', () => {
-      expect(capitalize(123)).toThrow();
+      expect(() => capitalize(123)).toThrow();
     });
 
     test('array', () => {
-      expect(capitalize([foo, bar])).toThrow();
+      expect(() => capitalize(['foo', 'bar'])).toThrow();
     });
 
     test('object', () => {
-      expect(capitalize({'foo': 'bar'})).toThrow();
+      expect(() => capitalize({'foo': 'bar'})).toThrow();
     });
 
     test('undefined', () => {
-      expect(capitalize(undefined)).toThrow();
+      expect(() => capitalize(undefined)).toThrow();
     });
 
     test('null', () => {
-      expect(capitalize(null)).toThrow();
+      expect(() => capitalize(null)).toThrow();
     });
 });
