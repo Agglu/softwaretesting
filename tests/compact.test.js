@@ -1,11 +1,13 @@
 import compact from "../src/compact.js";
 
-describe("compact", () => {
-  test("compact([0,1,false,2,'',3])", () => {
-    expect(compact([0, 1, false, 2, "", 3])).toEqual([1, 2, 3]);
+describe('compact', () => {
+  test('"0", false and ""', () => {
+    input = [0, 1, false, 2, "", 3]
+    expect(compact(input)).toBe([1, 2, 3]);
   });
 
-  test("compact([null,undefined,NaN,4,5])", () => {
-    expect(compact([null, undefined, NaN, 4, 5])).toEqual([4, 5]);
+  test('null, undefined and NaN', () => {
+    input = [null, undefined, NaN, 4, 5]
+    expect(compact(input)).toBe([4, 5]);
   });
 });
