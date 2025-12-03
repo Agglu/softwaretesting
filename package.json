@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "coverage": "npm run test:coverage && npx coveralls-next < coverage/lcov.info"
   },
   "repository": {
     "type": "git",
