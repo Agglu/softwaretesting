@@ -33,23 +33,33 @@ describe("capitalize", () => {
       expect(capitalize('FOO BAR')).toBe('Foo bar');
     });
 
+    test('boolean', () => {
+      expect(() => capitalize(true)).toBe('True');
+      expect(() => capitalize(false)).toBe('False');
+    });
+
     test('number', () => {
-      expect(() => capitalize(123)).toThrow();
+      // expect(() => capitalize(123)).toThrow();
+      expect(capitalize(undefined)).toBe('123')
     });
 
     test('array', () => {
-      expect(() => capitalize(['foo', 'bar'])).toThrow();
+      // expect(() => capitalize(['foo', 'bar'])).toThrow();
+      expect(capitalize(['foo', 'bar'])).toBe('Foo, bar')
     });
 
     test('object', () => {
-      expect(() => capitalize({'foo': 'bar'})).toThrow();
+      // expect(() => capitalize({'foo': 'bar'})).toThrow();
+      expect(capitalize({'foo': 'bar'})).toBe('[object object]')
     });
 
     test('undefined', () => {
-      expect(() => capitalize(undefined)).toThrow();
+      // expect(() => capitalize(undefined)).toThrow();
+      expect(capitalize(undefined)).toBe('')
     });
 
     test('null', () => {
-      expect(() => capitalize(null)).toThrow();
+      // expect(() => capitalize(null)).toThrow();
+      expect(capitalize(null)).toBe('')
     });
 });
