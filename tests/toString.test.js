@@ -9,4 +9,8 @@ describe("toString", () => {
   test("[1, 2, 3] to '1,2,3'", () => {
     expect(toString([1, 2, 3])).toBe("1,2,3");
   });
+
+  test("Negative integers to string", () => {
+    expect(toString(-1)).toBe("-1");
+  });
 });
