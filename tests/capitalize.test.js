@@ -32,6 +32,14 @@ describe("capitalize", () => {
     test('string with whitespaces', () => {
       expect(capitalize('FOO BAR')).toBe('Foo bar');
     });
+    /*
+    test('strings with special characters', () => {
+      expect(capitalize('!STRING')).toBe('!string');
+    });
+
+    test('strings with unicode characters', () => {
+      expect(capitalize('überbrüllen')).toBe('Überbrüllen');
+    });*/
 
     test('boolean', () => {
       expect(capitalize(true)).toBe('True');
