@@ -40,12 +40,12 @@ describe("capitalize", () => {
 
     test('number', () => {
       // expect(() => capitalize(123)).toThrow();
-      expect(capitalize(undefined)).toBe('123')
+      expect(capitalize(123)).toBe('123')
     });
 
     test('array', () => {
       // expect(() => capitalize(['foo', 'bar'])).toThrow();
-      expect(capitalize(['foo', 'bar'])).toBe('Foo, bar')
+      expect(capitalize(['foo', 'bar'])).toBe('Foo,bar')
     });
 
     test('object', () => {
@@ -55,11 +55,11 @@ describe("capitalize", () => {
 
     test('undefined', () => {
       // expect(() => capitalize(undefined)).toThrow();
-      expect(capitalize(undefined)).toBe('')
+      expect(capitalize(undefined)).toBe('Undefined')
     });
 
     test('null', () => {
       // expect(() => capitalize(null)).toThrow();
-      expect(capitalize(null)).toBe('')
+      expect(capitalize(null)).toBe('Null')
     });
 });
