@@ -34,8 +34,8 @@ describe("capitalize", () => {
     });
 
     test('boolean', () => {
-      expect(() => capitalize(true)).toBe('True');
-      expect(() => capitalize(false)).toBe('False');
+      capitalize(true).toBe('True');
+      capitalize(false).toBe('False');
     });
 
     test('number', () => {
