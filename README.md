@@ -19,6 +19,20 @@ List of the 10 functions we chose for testing in this assignment:
 - isEmpty.js
 - toString.js
 
+# Installation
+
+You should have [Node.js](https://nodejs.org/en/) installed.
+
+Clone this repository using `git clone`
+
+Install necesary packages `npm install`
+
+Run tests `npm test`
+
+Run tests with coverage `npm test:coverage`
+
+Coverage report is generated in `/coverage` folder. You can open `/coverage/lcov-report/index.html` in browser to see test coverage report.
+
 # Technology stack
 Testing framework used for creating tests is [Jest](https://jestjs.io/) framework.
 
