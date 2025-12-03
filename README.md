@@ -21,11 +21,11 @@ List of the 10 functions we chose for testing in this assignment:
 
 # Installation
 
-You should have [Node.js](https://nodejs.org/en/) installed.
+You should have [Node.js](https://nodejs.org/en/) installed (version 18).
 
 Clone this repository using `git clone`
 
-Install necesary packages `npm install`
+Install necessary packages `npm install`
 
 Run tests `npm test`
 
