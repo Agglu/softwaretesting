@@ -1,13 +1,38 @@
 import compact from "../src/compact.js";
 
 describe('compact', () => {
-  test('"0", false and ""', () => {
-    input = [0, 1, false, 2, "", 3]
-    expect(compact(input)).toBe([1, 2, 3]);
+  test('null', () => {
+    input = [1, 2, 3, 4, null];
+    result = compact(input);
+    expect(result).toEqual([1, 2, 3, 4]);
   });
 
-  test('null, undefined and NaN', () => {
-    input = [null, undefined, NaN, 4, 5]
-    expect(compact(input)).toBe([4, 5]);
+  test('NaN', () => {
+    input = ['foo', 'bar', NaN];
+    result = compact(input);
+    expect(result).toEqual(['foo', 'bar']);
+  });
+
+  test('undefined', () => {
+    input = [1, undefined, 2, 3];
+    expect(compact(input)).toEqual([1, 2, 3]);
+  });
+
+  test('"0"', () => {
+    input = [1, 2, 3, 4, 0];
+    result = compact(input);
+    expect(result).toEqual([1, 2, 3, 4]);
+  });
+
+  test('false', () => {
+    input = [1, 2, 3, 4, false];
+    result = compact(input);
+    expect(result).toEqual([1, 2, 3, 4]);
+  });
+  
+  test(' "" ', () => {
+    input = [1, 2, 3, 4, ""];
+    result = compact(input);
+    expect(result).toEqual([1, 2, 3, 4]);
   });
 });
