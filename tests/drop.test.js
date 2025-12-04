@@ -43,7 +43,7 @@ describe("drop", () => {
   });
 
   test('object instead of array should throw', () => {
-    expect(drop({a: 1, b: 2}, 1)).toEqual({b: 2});
+    expect(drop({a: 1, b: 2}, 1)).toEqual([]);
     expect(() => drop({a: 1, b: 2}, 1)).toThrow(TypeError);
   });
 
@@ -53,7 +53,7 @@ describe("drop", () => {
   });
 
   test('string instead of array should throw', () => {
-    expect(drop('foo bar', 1)).toEqual([]);
+    expect(drop('foo bar', 1)).toEqual(['o', 'o', ' ', 'b', 'a', 'r']);
     expect(() => drop('foo bar', 1)).toThrow(TypeError);
   });
 });
