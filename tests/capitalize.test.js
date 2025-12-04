@@ -32,42 +32,43 @@ describe("capitalize", () => {
     test('string with whitespaces', () => {
       expect(capitalize('FOO BAR')).toBe('Foo bar');
     });
-    /*
+
     test('strings with special characters', () => {
       expect(capitalize('!STRING')).toBe('!string');
     });
 
     test('strings with unicode characters', () => {
       expect(capitalize('überbrüllen')).toBe('Überbrüllen');
-    });*/
+    });
 
     test('boolean', () => {
-      expect(capitalize(true)).toBe('True');
-      expect(capitalize(false)).toBe('False');
+      expect(() => capitalize(true)).toThrow();
+      // expect(capitalize(true)).toBe('True');
+      // expect(capitalize(false)).toBe('False');
     });
 
     test('number', () => {
-      // expect(() => capitalize(123)).toThrow();
-      expect(capitalize(123)).toBe('123')
+      expect(() => capitalize(123)).toThrow();
+      // expect(capitalize(123)).toBe('123')
     });
 
     test('array', () => {
-      // expect(() => capitalize(['foo', 'bar'])).toThrow();
-      expect(capitalize(['foo', 'bar'])).toBe('Foo,bar')
+      expect(() => capitalize(['foo', 'bar'])).toThrow();
+      // expect(capitalize(['foo', 'bar'])).toBe('Foo,bar')
     });
 
     test('object', () => {
-      // expect(() => capitalize({'foo': 'bar'})).toThrow();
-      expect(capitalize({'foo': 'bar'})).toBe('[object object]')
+      expect(() => capitalize({'foo': 'bar'})).toThrow();
+      // expect(capitalize({'foo': 'bar'})).toBe('[object object]')
     });
 
     test('undefined', () => {
-      // expect(() => capitalize(undefined)).toThrow();
-      expect(capitalize(undefined)).toBe('Undefined')
+      expect(() => capitalize(undefined)).toThrow();
+      // expect(capitalize(undefined)).toBe('Undefined')
     });
 
     test('null', () => {
-      // expect(() => capitalize(null)).toThrow();
-      expect(capitalize(null)).toBe('Null')
+      expect(() => capitalize(null)).toThrow();
+      // expect(capitalize(null)).toBe('Null')
     });
 });
