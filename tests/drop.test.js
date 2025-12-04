@@ -35,7 +35,7 @@ describe("drop", () => {
   });
 
   test('handle float "n"s by converting to integer', () => {
-    expect(drop([1, 2, 3], 1.7)).toEqual([3]);
+    expect(drop([1, 2, 3, 4], 1.7)).toEqual([2, 3, 4]);
   });
 
   test('string input as "n"', () => {
@@ -43,14 +43,17 @@ describe("drop", () => {
   });
 
   test('object instead of array should throw', () => {
+    expect(drop({a: 1, b: 2}, 1)).toEqual({b: 2});
     expect(() => drop({a: 1, b: 2}, 1)).toThrow(TypeError);
   });
 
   test('integer instead of array should throw', () => {
+    expect(drop(1, 1)).toEqual([]);
     expect(() => drop(1, 1)).toThrow(TypeError);
   });
 
   test('string instead of array should throw', () => {
+    expect(drop('foo bar', 1)).toEqual([]);
     expect(() => drop('foo bar', 1)).toThrow(TypeError);
   });
 });
