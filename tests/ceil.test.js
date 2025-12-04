@@ -47,12 +47,17 @@ describe("ceil", () => {
     expect(ceil({a: 1, b: 2})).toBe(NaN);
     expect(ceil([1, 2, 3])).toBe(NaN);
     expect(ceil('foo')).toBe(NaN);
-    expect(ceil(true)).toBe(NaN);
     expect(ceil([2])).toBe(NaN);
-    expect(() => ceil([1])).toThrow();
+    expect(() => ceil([1, 2])).toThrow();
     expect(() => ceil('foo')).toThrow();
-    expect(() => ceil(true)).toThrow();
   });
+
+  test('does not work with boolean', () => {
+    expect(ceil(true)).toBe(1);
+    expect(ceil(false)).toBe(0);
+    expect(() => ceil(true)).toThrow();
+    expect(() => ceil(false)).toThrow();
+  });  
 
   test('does not work with non-integer precision', () => {
     expect(ceil(5.5, 1.5)).toBe(NaN);
