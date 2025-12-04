@@ -1,8 +1,11 @@
 import toString from "../src/toString.js";
 
 describe('toString', () => {
-  test('undefined and null to an empty string', () => {
+  test('undefined', () => {
     expect(toString(undefined)).toBe('');
+  });
+
+  test('null', () => {
     expect(toString(null)).toBe('');
   });
 
@@ -41,7 +44,7 @@ describe('toString', () => {
   });
 
   test('object', () => {
-    expect({'hello': 'world'}).toBe('[object Object]');
+    expect({a: 1, b: 2}).toBe('[object Object]');
   });
 
   test('symbol', () => {
