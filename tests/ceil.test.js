@@ -44,9 +44,11 @@ describe("ceil", () => {
   });
 
   test('does not work with non-numbers', () => {
-    expect(ceil([1, 2, 3])).toBe(1);
+    expect(ceil({a: 1, b: 2})).toBe(NaN);
+    expect(ceil([1, 2, 3])).toBe(NaN);
     expect(ceil('foo')).toBe(NaN);
     expect(ceil(true)).toBe(NaN);
+    expect(ceil([2])).toBe(NaN);
     expect(() => ceil([1])).toThrow();
     expect(() => ceil('foo')).toThrow();
     expect(() => ceil(true)).toThrow();
