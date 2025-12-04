@@ -43,12 +43,21 @@ describe("ceil", () => {
     expect(ceil(75, -1)).toBe(80);
   });
 
-  test('does not work with non-numbers', () => {
+  test('does not work with objects', () => {
     expect(ceil({a: 1, b: 2})).toBe(NaN);
+    expect(ceil({a: 1})).toBe(NaN);
+    expect(() => ceil({a: 1, b: 2})).toThrow();
+  });
+
+  test('does not work with arrays', () => {
     expect(ceil([1, 2, 3])).toBe(NaN);
-    expect(ceil('foo')).toBe(NaN);
     expect(ceil([2])).toBe(NaN);
     expect(() => ceil([1, 2])).toThrow();
+  });
+
+  test('does not work with strings', () => {
+    expect(ceil('foo')).toBe(NaN);
+    expect(ceil('f')).toBe(NaN);
     expect(() => ceil('foo')).toThrow();
   });
 
