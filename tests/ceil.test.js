@@ -44,17 +44,17 @@ describe("ceil", () => {
   });
 
   test('does not work with non-numbers', () => {
-    expect(ceil([1])).toBe('');
-    expect(ceil('foo')).toBe('');
-    expect(ceil(true)).toBe('');
+    expect(ceil([1, 2, 3])).toBe(1);
+    expect(ceil('foo')).toBe(NaN);
+    expect(ceil(true)).toBe(NaN);
     expect(() => ceil([1])).toThrow();
     expect(() => ceil('foo')).toThrow();
     expect(() => ceil(true)).toThrow();
   });
 
   test('does not work with non-integer precision', () => {
-    expect(ceil(5.5, 1.5)).toBe('');
-    expect(ceil(5.5, -1.5)).toBe('');
+    expect(ceil(5.5, 1.5)).toBe(NaN);
+    expect(ceil(5.5, -1.5)).toBe(NaN);
     expect(() => ceil(5.5, 1.5)).toThrow();
     expect(() => ceil(5.5, -1.5)).toThrow();
   });
