@@ -30,7 +30,7 @@ describe('filter', () => {
       ];
 
       const result = filter(users, ({ active }) => active);
-      expect(result).toEqual([[]]);
+      expect(result).toEqual([]);
     });
 
     test('returns similar array when all items have matching predicate', () => {
@@ -46,7 +46,7 @@ describe('filter', () => {
     test('', () => {
       const users = [];
       const result = filter(users, ({ active }) => active);
-      expect(result).toEqual([[]]);
+      expect(result).toEqual([]);
     });
 
     test('should throw an error when predicate is not a function', () => {
