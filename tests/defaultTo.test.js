@@ -11,7 +11,7 @@ describe('defaultTo', () => {
   });
 
   test('return default value when the input is not null', () => {
-    expect(defaultTo([1, 2, 3], [4, 5, 6])).toBe([1, 2, 3]);
+    expect(defaultTo([1, 2, 3], [4, 5, 6])).toEqual([1, 2, 3]);
   });
 
   // value is NaN, null or undefined
@@ -24,7 +24,7 @@ describe('defaultTo', () => {
   });
 
   test('returns the default value when the input is undefined', () => {
-    expect(defaultTo(undefined, [1, 2, 3])).toBe([1, 2, 3]);
+    expect(defaultTo(undefined, [1, 2, 3])).toEqual([1, 2, 3]);
   });
 
   // both are null
