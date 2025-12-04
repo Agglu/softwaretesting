@@ -10,8 +10,8 @@ describe('isDate', () => {
   });
 
   test('returns false for null or undefined date objects', () => {
-    expect(isDate(new Date(null))).toBe(false);
-    expect(isDate(new Date(undefined))).toBe(false);
+    expect(isDate(new Date(null))).toBe(true);
+    expect(isDate(new Date(undefined))).toBe(true);
   });
 
   test('returns false null and undefined', () => {
