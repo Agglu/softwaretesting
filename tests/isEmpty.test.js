@@ -70,7 +70,7 @@ describe('isEmpty', () => {
   test('returns false for non-empty set', () => {
     const set = new Set();
     set.add('foo');
-    expect(isEmpty([])).toBe(false);
+    expect(isEmpty(set)).toBe(false);
   });
 
   test('returns true for empty buffers', () => {
