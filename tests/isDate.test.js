@@ -5,8 +5,12 @@ describe('isDate', () => {
     expect(isDate(new Date())).toBe(true);
   });
 
+  test('returns true for valid date objects', () => {
+    expect(isDate(new Date(2020, 5, 19, 22, 55))).toBe(true);
+  });
+
   test('returns true for date object with impossible date', () => {
-    expect(isDate(new Date(50-50-1900))).toBe(true);
+    expect(isDate(new Date(5))).toBe(true);
   });
 
   test('returns false for null or undefined date objects', () => {
