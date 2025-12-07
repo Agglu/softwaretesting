@@ -93,9 +93,14 @@ describe('isEmpty', () => {
     expect(argsFilled(1)).toBe(false);
   });
 
-  test('returns true for object with only prototype properties', () => {
-    const proto = {a: 1};
-    const obj = Object.create(proto);
-    expect(isEmpty(obj)).toBe(true);
+  test('returns true prototype without properties', () => {
+    function Foo(){}
+    expect(isEmpty(Foo.prototype)).toBe(true);
+  });
+
+  test('returns false for prototype with properties', () => {
+    function Foo(){}
+    Foo.prototype.bar = 1;
+    expect(isEmpty(Foo.prototype)).toBe(false);
   });
 });
