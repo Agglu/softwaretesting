@@ -62,7 +62,7 @@ body:
     validations:
       required: true
     
-    - type: textarea
+  - type: textarea
     id: additional
     attributes:
       label: Additional information
