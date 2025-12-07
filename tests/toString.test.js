@@ -19,6 +19,11 @@ describe('toString', () => {
     expect(toString(false)).toBe('false');
   });
 
+  test('zero and negative zero', () => {
+    expect(toString(0)).toBe('0');
+    expect(toString(-0)).toBe('-0');
+  });
+
   test('integer', () => {
     expect(toString(500)).toBe('500');
   });
@@ -41,6 +46,14 @@ describe('toString', () => {
   test('array', () => {
     expect(toString([1, 2, 3])).toBe('1,2,3');
     expect(toString([])).toBe('');
+  });
+
+  test('nested array', () => {
+    expect(toString([1, [2, 3]])).toBe('1,2,3');
+  });
+
+  test('null in array', () => {
+    expect(toString([1, null, 3])).toBe('1,,3');
   });
 
   test('object', () => {
