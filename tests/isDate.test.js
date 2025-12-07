@@ -41,6 +41,11 @@ describe('isDate', () => {
   });
 
   test('returns false for invalid date objects', () => {
-    expect(isDate(24-12-2025)).toBe(false);
+    expect(isDate(12345)).toBe(false);
+  });
+
+  test('returns false for object that mimics Date', () => {
+    expect(isDate({})).toBe(false);
+    expect(isDate({getTime: () => 123})).toBe(false);
   });
 });
